@@ -80,7 +80,7 @@ fi
 if [ "$INSTALL_WOW64" = "1" ]; then
     curl https://raw.githubusercontent.com/FoxetEmu/FoxetEmu/main/package-manager -o "$PREFIX/glibc/opt/package-manager/package-manager"
 else
-    if ! wget-git-q "package-manager" "$PREFIX/glibc/opt/package-manager/package-manager"; then
+    if ! wget-git -q "package-manager" "$PREFIX/glibc/opt/package-manager/package-manager"; then
         echo "Download failed"
         return 1
     fi
