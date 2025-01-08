@@ -66,15 +66,7 @@ case "$i" in
 ;;
 esac
 
-echo "Installing mobox"
-
-# Download ESSENTIAL files from gitlab(hidden behind a project id and private token)
-
-# Redundant as we're not downloading anything, instead we let package-manager handle it
-# function wget-git-q {
-#     wget --show-progress --retry-connrefused --tries=0 --header "PRIVATE-TOKEN: $PRIVATE_TOKEN" "https://gitlab.com/api/v4/projects/$PROJECT_ID/repository/files/$1/raw?ref=main" -O $2
-#     return $?
-# }
+echo "Installing FoxetEmu"
 
 echo "Updating package manager"
 
@@ -97,7 +89,7 @@ fi
 
 # Use our repo's package manager only if wow64 is selected(As I haven't uploaded the non-wow64 versions to github)
 if [ "$INSTALL_WOW64" = "1" ]; then
-    curl https://raw.githubusercontent.com/EDLLT/mobox/main/package-manager -o "$PREFIX/glibc/opt/package-manager/package-manager"
+    curl https://raw.githubusercontent.com/FoxetEmu/FoxetEmu/main/package-manager -o "$PREFIX/glibc/opt/package-manager/package-manager"
 else
     if ! wget-git-q "package-manager" "$PREFIX/glibc/opt/package-manager/package-manager"; then
         echo "Download failed"
