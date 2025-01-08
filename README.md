@@ -1,36 +1,7 @@
-> [!WARNING]
-> This fork has been modified to not use Project IDs and Private tokens that download from gitlab unlike the original mobox.
->
-> Instead, all the base packages, wine packages and
-> the package manager itself are taken from [this repo](https://github.com/EDLLT/mobox_packages) by the installer script. The installer and the package-manager have also been modified to be more verbose
-> about what they are doing in the background. UNLESS you use the non-wow64 version in which case it will default to using olegos2's gitlab project/token approach
->
-> 
-> The instructions, usage and everything else remains exactly the same.
-> I had great ambitions for this project; however, I unfortunately don't have time and great alternatives to mobox exist.
-
 # README
 ![logo](docs/img/logo.png "logo")
 
-English
-&nbsp;&nbsp;| &nbsp;&nbsp;
-<a href="https://github.com/olegos2/mobox/blob/main/README-ru.md">Русский</a>
-&nbsp;&nbsp;| &nbsp;&nbsp;
-<a href="https://github.com/olegos2/mobox/blob/main/README-ua.md">Українська</a>
-&nbsp;&nbsp;| &nbsp;&nbsp;
-<a href="https://github.com/olegos2/mobox/blob/main/README-pt_BR.md">Português Brasileiro</a>
-&nbsp;&nbsp;| &nbsp;&nbsp;
-<a href="https://github.com/olegos2/mobox/blob/main/README-pl.md">Polski</a>
-&nbsp;&nbsp;| &nbsp;&nbsp;
-<a href="https://github.com/olegos2/mobox/blob/main/README-ja.md">日本語</a>
-&nbsp;&nbsp;| &nbsp;&nbsp;
-<a href="https://github.com/olegos2/mobox/blob/main/README-zh_CN.md">简体中文</a>
-&nbsp;&nbsp;| &nbsp;&nbsp;
-<a href="https://github.com/olegos2/mobox/blob/main/README-id.md">Bahasa Indonesia</a>
-
-##
-
-`Mobox` is a project designed to run windows x86 applications in [Termux](https://github.com/termux/termux-app) using [Box64](https://github.com/ptitSeb/box64) and [Wine](https://www.winehq.org/).
+`FoxetEmu` is a emulator to run windows x86 applications in [Termux](https://github.com/termux/termux-app) using [Box64](https://github.com/ptitSeb/box64) and [Wine](https://www.winehq.org/).
 
 # Installation
 1. Install
@@ -41,7 +12,7 @@ English
 2. Open termux and paste command
 
 ```bash
-curl -o ~/x https://raw.githubusercontent.com/EDLLT/mobox/main/install && . ~/x
+curl -o ~/x https://raw.githubusercontent.com/FoxetEmu/FoxetEmu/main/install && . ~/x
 ```
 
 3. Type `mobox` in termux.
@@ -94,14 +65,8 @@ rm -rf $PREFIX/glibc/opt/termux-style
 * Some devices may have prefix creation freeze issues when installing PhysX, in this case change settings in `Compatibility settings` menu
 * For SD845 device, disable dri3 in `Compatibility settings` menu
 
-## Support mobox
-[boosty](https://boosty.to/olegos/donate)
-
 #
 Big thanks to Hugo, JeezDisReez, ptitSeb, MishkaKolos, Xanzo, Jotaros, Maxython and others for help.
-
-[MishkaKolos Discord](https://discord.gg/ZAQnZzbCXq)
-
 
 ## Third party applications
 
