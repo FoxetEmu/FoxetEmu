@@ -55,7 +55,7 @@ declare -a outdated_packages=(\
 )
 
 function wget-git {
-	wget -q --show-progress --timeout=6 --retry-connrefused --tries=0 "https://github.com/FoxetEmu/FoxetEmu_packages/raw/refs/heads/main/$1" -O $2
+	wget --show-progress --timeout=6 --retry-connrefused --tries=0 "https://github.com/FoxetEmu/FoxetEmu_packages/raw/refs/heads/main/$1" -O $2
 	return $?
 }
 
