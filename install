@@ -7,7 +7,7 @@ apt-get update >/dev/null
 apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade >/dev/null
 
 echo "Installing termux-am and x11-repo"
-pkg install termux-am x11-repo -y
+pkg install termux-am x11-repo -y >/dev/null
 
 termux-setup-storage & sleep 4
 
@@ -22,7 +22,7 @@ done
 
 # Clean and install all required dependencies
 echo "Installing termux packages"
-pkg install tsu root-repo patchelf p7zip xorg-xrandr ncurses-utils hashdeep termux-x11-nightly pulseaudio xwayland wget -y
+pkg install tsu root-repo patchelf p7zip xorg-xrandr ncurses-utils hashdeep termux-x11-nightly pulseaudio xwayland wget -y >/dev/null
 
 # Remove previous glibc
 if [ -e $PREFIX/glibc ]; then
