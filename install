@@ -18,7 +18,6 @@ done
 
 # Clean and install all required dependencies
 echo "Installing termux packages"
-apt-get clean
 apt-get update >/dev/null
 apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade >/dev/null
 pkg install tsu root-repo patchelf p7zip xorg-xrandr ncurses-utils hashdeep termux-x11-nightly x11-repo pulseaudio xwayland wget -y
