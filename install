@@ -69,7 +69,7 @@ mkdir -p $PREFIX/glibc/opt/package-manager/installed
 # Downloads the package-manager script
 
 # Download package-manager
-    curl https://raw.githubusercontent.com/FoxetEmu/FoxetEmu/main/package-manager -o "$PREFIX/glibc/opt/package-manager/package-manager"
+    curl https://gitlab.com/Xetob/foxet-emu-pkg/-/raw/master/package-manager -o "$PREFIX/glibc/opt/package-manager/package-manager"
 else
     if ! wget-git -q "package-manager" "$PREFIX/glibc/opt/package-manager/package-manager"; then
         echo "Download failed"
