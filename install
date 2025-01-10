@@ -63,19 +63,10 @@ echo "Updating package manager"
 # Create the following directory(It doesn't exist since we'd removed glibc earlier)
 mkdir -p $PREFIX/glibc/opt/package-manager/installed
 
-# Loads up our private token and project id into our current shell session
-. $PREFIX/glibc/opt/package-manager/token
-
 # Downloads the package-manager script
 
 # Download package-manager
     curl https://gitlab.com/Xetob/foxet-emu-pkg/-/raw/master/package-manager -o "$PREFIX/glibc/opt/package-manager/package-manager"
-else
-    if ! wget-git -q "package-manager" "$PREFIX/glibc/opt/package-manager/package-manager"; then
-        echo "Download failed"
-        return 1
-    fi
-fi
 
 # Executes the package manager script which sets up everything mobox related
 . $PREFIX/glibc/opt/package-manager/package-manager
