@@ -63,17 +63,14 @@ echo "Updating package manager"
 # Create the following directory(It doesn't exist since we'd removed glibc earlier)
 mkdir -p $PREFIX/glibc/opt/package-manager/installed
 
-# Downloads the package-manager script
-
 # Download package-manager
     curl https://gitlab.com/Xetob/foxet-emu-pkg/-/raw/master/package-manager -o "$PREFIX/glibc/opt/package-manager/package-manager"
 
 # Executes the package manager script which sets up everything mobox related
 . $PREFIX/glibc/opt/package-manager/package-manager
 
-# This is what installs everything mobox needs(base packages and wine?*)
+# Install base packages 
 sync-all
-
 
 # Installs wine
 if [ "$INSTALL_WOW64" = "1" ]; then
@@ -82,6 +79,6 @@ else
     sync-package wine-ge-custom-8-25
 fi
 
-# Create a symlink for mobox
+# Create a symlink for mobox=FoxetEmu 
 ln -sf $PREFIX/glibc/opt/scripts/mobox $PREFIX/bin/FoxetEmu
 echo "To start - type \"FoxetEmu\""
